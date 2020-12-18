@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc88988a1b3c7fd75979316bb9ebc70",
+    "content-hash": "7cf288bd34ae7cb7416eefce11cbd122",
     "packages": [
+        {
+            "name": "lizus/php-captcha",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lizus/php-captcha.git",
+                "reference": "d255e64232bc90e6bcc0d766e8c39015d329d60b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lizus/php-captcha/zipball/d255e64232bc90e6bcc0d766e8c39015d329d60b",
+                "reference": "d255e64232bc90e6bcc0d766e8c39015d329d60b",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "lizus/php-redis": "dev-master",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LizusCaptcha\\": "src/class/"
+                },
+                "files": [
+                    "src/function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lizus",
+                    "email": "lizus.com@gmail.com"
+                }
+            ],
+            "description": "php captcha",
+            "time": "2020-11-25T11:59:28+00:00"
+        },
         {
             "name": "lizus/php-curl",
             "version": "dev-master",
@@ -89,6 +135,51 @@
             ],
             "description": "load dir files",
             "time": "2020-08-29T03:00:00+00:00"
+        },
+        {
+            "name": "lizus/php-redis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lizus/php-redis.git",
+                "reference": "100ebfbc20f1732828edf46f9b35933717908035"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lizus/php-redis/zipball/100ebfbc20f1732828edf46f9b35933717908035",
+                "reference": "100ebfbc20f1732828edf46f9b35933717908035",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lizus\\PHPRedis\\": "src/class/"
+                },
+                "files": [
+                    "src/function/get_redis.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lizus",
+                    "email": "lizus.com@gmail.com"
+                }
+            ],
+            "description": "php redis class",
+            "time": "2020-11-25T06:45:58+00:00"
         },
         {
             "name": "lizus/wp-function",
@@ -272,7 +363,8 @@
         "lizus/wp-media": 20,
         "lizus/wp-seo": 20,
         "lizus/wp-function": 20,
-        "lizus/php-curl": 20
+        "lizus/php-curl": 20,
+        "lizus/php-captcha": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

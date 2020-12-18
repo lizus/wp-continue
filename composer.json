@@ -9,7 +9,8 @@
         "lizus/wp-media": "dev-main",
         "lizus/wp-seo": "dev-main",
         "lizus/wp-function": "dev-main",
-        "lizus/php-curl": "dev-master"
+        "lizus/php-curl": "dev-master",
+        "lizus/php-captcha": "dev-main"
     },
     "license": "GPL-2.0-or-later",
     "authors": [{
