@@ -1,0 +1,746 @@
+//out:../static/css/admin.css,sourcemap:false,compress:true
+@import "./bootstrap/variables.less";
+@grid-gutter-width:10px;
+@import "./bootstrap/mixins/clearfix.less";
+@import "./bootstrap/mixins/grid-framework.less";
+@import "./bootstrap/mixins/grid.less";
+@import "./bootstrap/grid.less";
+@light:#f9f9f9;
+@dark:#525252;
+@primary:#337ab7;
+@success:#3e8f3e;
+@danger:#d9534f;
+@info:#5bc0de;
+span,
+label,
+input,
+textarea,
+button,
+p,
+div {
+  box-sizing: border-box;
+}
+.tablenav-pages-navspan {
+  height: auto;
+}
+#edittag { max-width: none; }
+.vitara {
+  margin-top:20px;
+}
+.btn {
+  display: inline-block;
+  padding: 4px 1em;
+  background: @dark;
+  color: @light;
+  border-radius: 0.3em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: inset 0 0 0.2em darken(@dark,2%);
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  &:focus,
+  &:hover {
+    background: darken(@dark,10%);
+    color: @light;
+  }
+}
+.btn-lg {
+  padding: 0.5em 1.5em;
+  font-size: 1.1em;
+}
+.btn-primary {
+  background-color:@primary;
+  &:focus,
+  &:hover {
+    background-color: darken(@primary,10%);
+  }
+}
+.btn-info {
+  background-color:@info;
+  &:focus,
+  &:hover {
+    background-color: darken(@info,10%);
+  }
+}
+.vitara_panel {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 1em;
+  letter-spacing: 1px;
+  background: @light;
+  border-radius: 0.4em;
+  box-shadow: inset 0 -1px 5px darken(@light,10%);
+  border: 1px solid darken(@light,10%);
+  color: @dark;
+  h1 {
+    font-size: 1.5em;
+    color: darken(@dark,10%);
+    border-bottom: 1px solid darken(@light,10%);
+  }
+  h2 {
+    font-size: 1.4em;
+    font-weight: normal;
+    color: darken(@dark,10%);
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: darken(@dark,10%);
+  }
+  p {
+    font-size: 1em;
+  }
+  .code,
+  code,
+  .link {
+    display: inline-block;
+    padding: 0 0.5em;
+    background: darken(@light,10%);
+    color: @dark;
+    border-radius: 0.2em;
+    text-decoration: none;
+    box-shadow: inset 0 0 0.4em darken(@light,20%);
+    &:hover {
+      color: darken(@dark,50%);
+      background: darken(@light,10%);
+    }
+  }
+  .submit_div {
+    .clearfix();
+  }
+  .set_item {
+    background: lighten(@light,2%);
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid darken(@light,5%);
+    margin: 0 0 1em;
+    &:hover {
+      background: lighten(@light,1%);
+    }
+  }
+  .setting {
+    background: lighten(@light,2%);
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid darken(@light,5%);
+    margin: 0 0 1em;
+    .set_item {
+      border:none;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .box {
+    padding: 0 0.5em;
+    background: lighten(@light,2%);
+    border-radius: 0.5em;
+    border: 1px solid darken(@light,5%);
+    margin: 0 0 1em;
+    position: relative;
+    .close {
+      display: block;
+      position: absolute;
+      right: 1em;
+      top:1em;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        transform: rotate(360deg);
+        transition: all 0.5s;
+      }
+    }
+  }
+  .box-success {
+    background: lighten(@success,50%);
+    border-color:lighten(@success,10%);
+    color: @success;
+  }
+  .box-danger {
+    background: lighten(@danger,35%);
+    border-color:lighten(@danger,10%);
+    color: @danger;
+  }
+  .label {
+    padding: 0 0.6em 0.5em;
+    border-bottom:1px solid lighten(@dark,40%);
+    border-radius: 0 0 5px 5px;
+  }
+}
+.vitara-form-item {
+  .toggle {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 28px;
+    color: #fff;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 6px;
+    background: lighten(@dark,30%);
+    transition: all 0.5s;
+    box-shadow:inset 0 0 4px darken(@dark,10%);
+    cursor: pointer;
+    &:after {
+      display: block;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      width: 36px;
+      line-height:26px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #fff;
+      background: darken(@dark,10%);
+      transition: all 0.5s;
+      box-shadow: inset 0 0 4px darken(@dark,10%);
+    }
+  }
+  .toggle-on{
+    background: lighten(@dark,50%);
+    &:after {
+      content:'On';
+      border-radius:6px 2px 2px 6px;
+      background: darken(@success,5%);
+    }
+  }
+  .toggle-off {
+    &:after {
+      content:'Off';
+      border-radius: 2px 6px 6px 2px;
+      background: darken(@danger,15%);
+      transform: translate(100%,0);
+    }
+  }
+  .toggle-moving {
+    background: lighten(@dark,10%);
+    &:after {
+      color: transparent;
+      border-color: darken(@dark,15%);
+      background-color: darken(@dark,20%);
+      transition: color 0s, transform 500ms, border-radius 500ms,           background-color 500ms;
+    }
+  }
+  .input {
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  input.image_input {
+    width: 60%;
+  }
+  .crop_textarea,
+  .images_textarea {
+    visibility: hidden;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .crop_textarea {
+    position: absolute;
+  }
+  .images_show {
+    >div {
+      .close {
+        line-height: 1em;
+        position: absolute;
+        right:8px;
+        top:8px;
+        padding: 0.5em 0.4em;
+        background: @info;
+        color: @light;
+        border-radius: 0.3em;
+        cursor: pointer;
+        visibility: hidden;
+        &:hover {
+          background: @danger;
+        }
+      }
+      &:hover {
+        .close {
+          visibility: visible;
+        }
+      }
+    }
+    .item {
+      height:100px;
+      text-align: center;
+      border-radius: 4px;
+      background-color: darken(@light,10%);
+      overflow: hidden;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .radio,
+  .checkbox {
+    position: relative;
+    margin-bottom:1em;
+    input {
+      visibility: hidden;
+      position: absolute;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 2.6em;
+      line-height: 2.6em;
+      padding: 0 0.5em;
+      text-align: center;
+      background: lighten(@dark,20%);
+      overflow: hidden;
+      color: lighten(@dark,40%);
+      border: 1px solid lighten(@dark,5%);
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: inset 0 0 5px lighten(@dark,10%);
+      position: relative;
+      i {
+        display: block;
+        position: absolute;
+        right:5px;
+        top:5px;
+        font-size: 10px;
+        line-height: 1em;
+        visibility: hidden;
+      }
+      &:hover {
+        color: @light;
+      }
+    }
+    input:checked+span {
+      background: @success;
+      border-color:darken(@success,10%);
+      color: @light;
+      i {
+        visibility: visible;
+      }
+    }
+  }
+  .selects {
+    max-height: 145px;
+    overflow: auto;
+  }
+  .selects,
+  .slide_item {
+    margin-bottom: -1em;
+  }
+  .slide_textarea {
+    visibility: hidden;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .slide_items_ul {
+    padding: 10px 0 0;
+    margin: 0;
+    li {
+      padding: 5px 0 0;
+      background: #f2f2f2;
+      margin: 0 0 10px;
+      border-radius: 5px;
+      position: relative;
+      .btn-close {
+        position: absolute;
+        right: 5px;
+        bottom:5px;
+        padding: 4px;
+        display: none;
+      }
+      &:hover {
+        .btn-close {
+          display: inline;
+        }
+      }
+      div {
+        min-height: 30px;
+        margin-bottom: 5px;
+      }
+      .col-lg-2 .input {
+        width: 80%;
+      }
+    }
+  }
+  .review {
+    width: auto;
+    height: 26px;
+    padding: 1px;
+    border-radius: 0;
+    position: relative;
+    float: left;
+    margin: 0 5px 0 0;
+    img {
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+    .review_big {
+      position: absolute;
+      right: 100%;
+      bottom:0;
+      height: 150px;
+      display: none;
+      padding: 3px;
+      background: #525252;
+      margin: 0;
+    }
+    &:hover {
+      .review_big {
+        display: block;
+      }
+    }
+  }
+}
+.vitara-desc {
+  color: lighten(@dark,40%);
+  font-size: 13px;
+  margin-bottom: 0;
+}
+#colorbox {
+  margin-top:50px;
+}
+.vitara_meta {
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .vitara_panel {
+    .vitara-form-item {
+      margin-top:15px;
+    }
+    .image_input {
+      width: 100%;
+    }
+  }
+}
+
+.set_item .reviews {
+  padding: 10px;
+  clear: both;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0 0;
+  border: 1px dashed #ccc;
+  .review {
+    overflow-x: auto;
+    div,li,ul {
+      display: none;
+    }
+    .spark_rm,
+    .spark_rm .hidden {
+      display: block;
+    }
+  }
+}
+
+#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
+  background-size: cover;
+  padding: 0;
+  width: 32px;
+  border-radius: 32px;
+  overflow: hidden;
+  span {
+    display: none;
+  }
+}
+
+.user-profile-picture,
+.user-description-wrap,
+.user-comment-shortcuts-wrap,
+.show-admin-bar,
+.user-language-wrap,
+//.user-url-wrap,
+.user-aim-wrap,
+.user-jabber-wrap,
+.user-yim-wrap {
+  display: none !important;
+}
+
+.avatar {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+td .avatar+strong {
+  display: none;
+}
+td .avatar {
+  float: none;
+}
+
+.dragsort_setting {
+  .dragsort_items_ul {
+    li.row {
+      position: relative;
+      margin-bottom: 10px;
+      &>.btn-close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 10;
+        font-size: 10px;
+        padding: 5px;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+  .padding-left-25 {
+    padding-left: 25px;
+    position: relative;
+    em {position: absolute;left: 5px;top:0;display: block;width: 20px;height: 28px;line-height: 28px;text-align: center;cursor: pointer;}
+  }
+  .padding-right-40 {
+    padding-right: 40px;
+  }
+  &.spark_post_dubao {
+    li.row {
+      padding: 10px;
+      border: 1px dashed #ddd;
+      border-radius: 5px;
+      background: #fff;
+      list-style-type: decimal;
+      &>.btn-close {
+        right: -20px;
+        top: 10px;
+        z-index: 10;
+        transform: none;
+        visibility: hidden;
+      }
+      &:hover {
+        &>.btn-close {
+          visibility: visible;
+        }
+      }
+      .col-md-12 {
+        margin-top: 10px;
+      }
+    }
+    .add_dragsort {
+      background: #ff6000;
+      padding: 8px 28px;
+    }
+  }
+}
+
+.ds_post_show {
+  span {
+    line-height: 30px;
+  }
+}
+#wpfooter {
+  visibility: hidden;
+}
+
+.col-md-12 .image_input {
+  display: inline-block !important;
+  width: 60%;
+  border-radius: 4px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+  background: #fff;
+  color: #32373c;
+  outline: none;
+  transition: 50ms border-color ease-in-out;
+}
+.user-verify .update_text {
+  width: 100%;
+}
+.row-actions .sticky {
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+//交友列表首列信息隐藏
+.wp-list-table {
+  .type-friends {
+    .row-actions {
+      .view,
+      .inline {
+        display: none;
+      }
+    }
+  }
+}
+
+.vitara_mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 99999;
+}
+.vitara_model {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99999;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  .close-model {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+  .submit_btn {
+    text-align: center;
+  }
+  .vitara_model_content {
+    margin-bottom: 10px;
+  }
+}
+
+.nav-pages {
+  padding: 15px 0;
+  line-height: 3em;
+  font-size: 14px;
+  span {
+    display: inline-block;
+    padding: 0 15px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+#authordiv {
+  display: none;
+}
+
+#wpadminbar .avatar {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: text-top;
+  border-radius: 100%;
+  margin-left: 5px;
+}
+#wp-admin-bar-user-info .avatar {
+  width: 72px;
+  height: 72px;
+}
+
+.h-scale {
+  transition: all .2s;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  img,
+  .thumb {
+    transition: all .2s;
+  }
+  &:hover {
+    img,
+    .thumb {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.flex {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-between;
+}
+
+@sm: 768px;
+@md: 1024px;
+@lg: 1330px;
+
+@orange: #ff5c00;
+
+.pre_views {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 199;
+  background: #fff;
+  border: 1px dashed #eee;
+  padding: 25px 40px 25px 25px;
+  .thumb {
+    display: block;
+    width: 150px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @import "ad";
+}
+
+.comments {
+  .author {
+    a:first-child {
+      display: none;
+    }
+  }
+}
+.wp-list-table th#title {
+  width: 300px;
+}
+
+.dragsort_sifangke_ul {
+  .col-md-12 {
+    padding-left: 120px;
+    margin-top: 0;
+    line-height: 1;
+    position: relative;
+    min-height: 50px;
+    &>.btn {
+      position: absolute;
+      left: 30px;
+      top: 12px;
+    }
+    br {
+      display: none;
+    }
+    .images_show .item {
+      height: 70px;
+      width: 105px;
+    }
+  }
+}
+
+.image-crop-panel .crop-shadow-image {
+  opacity: 0.05;
+}
+
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  .image_input.hide-if-js {
+    display: inline-block;
+  }
+}

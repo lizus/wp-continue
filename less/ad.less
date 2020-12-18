@@ -1,0 +1,161 @@
+//main:../styles.less
+.kind {
+  position: relative;
+  display: block;
+  border-radius: 3px;
+  overflow: hidden;
+  a {
+    .h-scale();
+  }
+  img {
+    width: 100%;
+  }
+}
+
+
+.ktuwen {
+  background: #ecf1f5;
+  position: relative;
+  .kbtn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    line-height: 22px;
+    height: 22px;
+    padding: 0 5px;
+    @media(min-width:@sm) {
+      top: auto;
+      bottom: 10px;
+    }
+  }
+  .k-content {
+    @media(min-width:@sm) {
+      .flex();
+    }
+  }
+  .k-thumb {
+    overflow: hidden;
+    @media(min-width:@sm) {
+      width: 220px;
+      flex-shrink: 0;
+    }
+    .thumb {
+      padding-top: 74.5454%;
+      background-size: contain;
+    }
+  }
+  .k-btn {
+    padding: 25px 25px 35px;
+    @media(min-width:@sm) {
+      padding: 65px 0 0;
+      flex-shrink: 0;
+    }
+    .btn {
+      padding: 0 35px;
+      line-height: 40px;
+      @media(min-width:@sm) {
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      @media(min-width:@md) {
+        padding: 0 15px;
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+      }
+      @media(min-width:@lg) {
+        padding: 0 35px;
+        margin-right: 40px;
+        position: static;
+      }
+    }
+  }
+  .k-main {
+    padding: 0 25px;
+    flex-grow: 1;
+    @media(min-width:@sm) {
+      padding: 25px;
+    }
+    h2 {
+      color: #585858;
+      font-size: 26px;
+      line-height: 1.4;
+      margin-bottom: 2px;
+      @media(min-width:@sm) {
+        margin-bottom: 7px;
+        color: #555;
+        font-size: 26px;
+      }
+      .btn {
+        display: inline-block;
+        font-size: 12px;
+        background: transparent;
+        padding: 0 5px;
+        line-height: 1.57;
+        font-style: normal;
+        font-weight: normal;
+        vertical-align: middle;
+        margin-top: -3px;
+        @media(min-width:@sm) {
+          margin-top: -5px;
+          font-size: 13px;
+        }
+      }
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #797979;
+      margin-bottom: 20px;
+      @media(min-width:@sm) {
+        font-size: 16px;
+        margin-bottom: 13px;
+      }
+      @media(min-width:@lg) {
+        font-size: 18px;
+      }
+    }
+    h5 {
+      font-size: 12px;
+      font-weight: normal;
+      color: #787878;
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.nptshow {
+  line-height: 24px;
+  color: #888;
+  a {
+    color: #666;
+    &:hover {
+      color: @orange;
+      img{
+        transform: scale(1);
+      }
+    }
+  }
+  .ico {
+    display: inline-block;
+    width: 24px;
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+  p {
+    display: inline;
+  }
+}
+
+.keep_link {
+  .tuweia,
+  .article-ad {
+    display: none !important;
+  }
+}
