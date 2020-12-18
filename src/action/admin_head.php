@@ -12,6 +12,6 @@ add_action('admin_head',function (){
         'admin',
     ];
     foreach ($arr as $item) {
-        echo '<link rel="stylesheet" href="'.\LizusContinue\get_static_uri().'/css/admin/'.$item.'.css?ver='.\LizusContinue\get_version().'">'."\n";
+        echo '<link rel="stylesheet" href="'.\LizusContinue\get_static_uri().'/css/'.$item.'.css?ver='.\LizusContinue\get_version().'">'."\n";
     }
 });

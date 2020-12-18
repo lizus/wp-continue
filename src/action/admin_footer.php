@@ -12,7 +12,7 @@ add_action( "admin_footer", function (){
         'admin',
     ];
     foreach ($arr as $item) {
-        echo '<script src="'.\LizusContinue\get_static_uri().'/js/admin/'.$item.'.js?ver='.\LizusContinue\get_version().'"></script>'."\n";
+        echo '<script src="'.\LizusContinue\get_static_uri().'/js/'.$item.'.js?ver='.\LizusContinue\get_version().'"></script>'."\n";
     }
     
 });
