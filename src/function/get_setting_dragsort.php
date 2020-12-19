@@ -8,5 +8,5 @@ namespace LizusContinue;
  * @return array
  */
 function get_setting_dragsort($str=''){
-    return LizusContinue\dragsort_decode(\stripslashes($str));
+    return \LizusContinue\dragsort_decode(\stripslashes($str));
 }
