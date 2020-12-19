@@ -7,7 +7,7 @@ namespace LizusContinue\Login;
 * 微信公众号扫码关注后登录处理
 * 主题中使用的时候请确保使用App\Login\WechatOffiLogin来继承
 */
-class WechatOffiLogin extends LizusVitara\Login\Login
+class WechatOffiLogin extends \LizusVitara\Login\Login
 {
     /**
     * existUserQuery

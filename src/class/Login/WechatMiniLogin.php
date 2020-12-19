@@ -8,7 +8,7 @@ namespace LizusContinue\Login;
 * 该渠道不可用于绑定帐号
 * 主题中使用的时候请确保在\App\Login\中使用同名类并填写$AppID和$AppSecret
 */
-class WechatMiniLogin extends LizusVitara\Login\Login
+class WechatMiniLogin extends \LizusVitara\Login\Login
 {
     protected static $AppID='';
     protected static $AppSecret='';

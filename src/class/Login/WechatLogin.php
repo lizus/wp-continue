@@ -7,7 +7,7 @@ namespace LizusContinue\Login;
 * 微信端浏览器登录处理
 * 主题中使用的时候请确保在\App\Login\中使用同名类并填写$AppID和$AppSecret
 */
-class WechatLogin extends LizusVitara\Login\Login
+class WechatLogin extends \LizusVitara\Login\Login
 {    
     protected static $AppID='';
     protected static $AppSecret='';
