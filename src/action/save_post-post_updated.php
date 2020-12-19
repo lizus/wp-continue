@@ -5,6 +5,6 @@
 add_action( "save_post", function ($pid,$post,$update){
   if ($post->post_status=='publish') {
     $user=new \LizusContinue\User\User($post->post_author);
-    $user->set('post_updated',time());
+    $user->set('post_updated',current_time('timestamp'));
   }
 },10,3);
