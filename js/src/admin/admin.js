@@ -95,9 +95,14 @@ jQuery(function ($) {
   }
 
   function image_colorbox() {
-    image_init();
     var src = $(this).val();
     if (src.search(/https?:\/\//i) == 0) {
+      var review = $(this).siblings('.review');
+      if (review.length < 1) {
+        review = $(' <a href="#" class="review btn btn-review"><img src="' + src + '" alt="thumb"><div class="review_big"><img src="' + src + '" alt="big"></div></a> ');
+        $(this).before(review);
+      }
+      review.find('img').attr('src', src);
       var p = review.parents('li.row');
       if (p.length > 0) {
         var color_ele = p.find('[name="item_color"]');
