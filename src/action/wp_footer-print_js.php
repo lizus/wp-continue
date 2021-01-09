@@ -7,6 +7,6 @@ add_action('wp_footer', function () {
         'web'=>get_bloginfo('template_directory') .$ui.'/js/web.js',
     ]);
     foreach ($data as $item) {
-        echo '<script src="'.$item.'?v='.\LizusContinue\get_version().'" charset="utf-8"></script>';
+        echo '<script src="'.$item.'?v='.\LizusContinue\get_version().'" charset="utf-8"></script>'."\n";
     }
 },100);

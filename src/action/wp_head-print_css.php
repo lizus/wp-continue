@@ -7,6 +7,6 @@ add_action('wp_head', function () {
         'styles'=>get_bloginfo('template_directory') .$ui.'/css/styles.css',
     ]);
     foreach ($data as $item) {
-        echo '<link rel="stylesheet" href="'.$item.'?v='.\LizusContinue\get_version().'" type="text/css" media="all">';
+        echo '<link rel="stylesheet" href="'.$item.'?v='.\LizusContinue\get_version().'" type="text/css" media="all">'."\n";
     }
 },100);
