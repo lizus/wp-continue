@@ -6,7 +6,7 @@
  * $key中使用date函数来生成缓存每天固定时间到期，18000为5*3600，意味着每天早上5点之后，生成的key就会是新值，这样就替换了旧值，旧的key等过期时间到了再自动销毁即可。
  * $user的获取数据中，还需要有一个total_users用来计数总的用户数，所以增加$key_total来存储相关结果
  */
-add_action('pre_user_query',function (&$user){
+add_action('pre_user_query',function ($user){
     $qvs=$user->query_vars;
 
     //需要在查询中有need_cache值等于yes，见filter/wp_dropdown_users_args.php
