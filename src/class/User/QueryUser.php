@@ -3,7 +3,7 @@ namespace LizusContinue\User;
 
 class QueryUser extends \LizusVitara\User\QueryUser
 {
-    protected function get_item($uid){
-        return compact('uid');
+    protected function get_item($id){
+        return compact('id');
     }
 }
