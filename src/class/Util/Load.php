@@ -35,7 +35,7 @@ class Load {
         /**
          * 调用形如loadHeader($name,$data)的方法的时候，载入$path_root.'/header-'.$name.php的模板
          */
-        if(\preg_match('/load([A-Z][_a-zA-Z0-9]*)/',$name,$m)) {
+        if(\preg_match('/load([A-Z0-9][_a-zA-Z0-9]*)/',$name,$m)) {
             $path=\lcfirst($m[1]);
             $name=$args[0] ?? '';
             $data=(isset($args[1]) && is_array($args[1])) ? $args[1] : [];
