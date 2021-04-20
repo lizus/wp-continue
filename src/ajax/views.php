@@ -14,12 +14,12 @@ function vitara_ajax_views(){
   $ids=(isset($_REQUEST['ids'])) ? $_REQUEST['ids'] : '';
 
   if (!empty($id)) {
-    $p=new \LizusContinue\Post\Post($id);
+    $p=new \App\Post\Post($id);
     $p->addViews();
   }
   if (!empty($ids) && is_array($ids)) {
     foreach ($ids as $id) {
-      $p=new \LizusContinue\Post\Post($id);
+      $p=new \App\Post\Post($id);
       $p->addViews();
     }
   }
