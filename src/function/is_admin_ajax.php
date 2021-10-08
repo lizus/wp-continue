@@ -8,5 +8,6 @@ namespace LizusContinue;
  */
 function is_admin_ajax(){
   if(preg_match('/^admin\-ajax\.php/',basename($_SERVER['REQUEST_URI']))) return true;
+  if(preg_match('/^async\-upload\.php/',basename($_SERVER['REQUEST_URI']))) return true;
   return false;
 }
