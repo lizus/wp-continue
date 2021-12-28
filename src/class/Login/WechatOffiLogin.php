@@ -34,11 +34,15 @@ class WechatOffiLogin extends \LizusVitara\Login\Login
                 $this->formatedData[$key]=$value;
             }
         }
+        /**
+         * 微信调整策略，从公众号扫码过来的用户拿不到头像和昵称，id的生成改用openid来生成，去掉头像，同时将昵称改为和id一样。
+         */
+        $user_login=md5($this->formatedData['openid'].microtime(true));
         $this->formatedData['from']='PC端微信公众号扫码';
-        $this->formatedData['user_login']=md5($this->formatedData['nickname'].microtime(true));
+        $this->formatedData['user_login']=$user_login;
         $this->formatedData['user_email']=$this->formatedData['user_login'].'@'.$_SERVER['SERVER_NAME'];
-        $this->formatedData['avatar']=$this->formatedData['headimgurl'];
-        $this->formatedData['display_name']=$this->formatedData['nickname'];
+        $this->formatedData['avatar']='';
+        $this->formatedData['display_name']=$user_login;
         return $this;
     }
     
