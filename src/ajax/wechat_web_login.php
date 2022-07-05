@@ -54,7 +54,7 @@ function vitara_ajax_wechat_web_login(){
     //}else {
     //    wp_redirect(get_bloginfo('url'));
     }
-    echo '<script>location.href="'.$redirect.'";</script>';
+    wp_redirect(\LizusContinue\get_redirect_url($redirect));
     
     die();
 }
