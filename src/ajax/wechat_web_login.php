@@ -25,6 +25,9 @@ function vitara_ajax_wechat_web_login(){
     }else {
         $bind=false;
     }
+    if(empty($redirect)) {
+        $redirect=get_bloginfo('url');
+    }
     
     if (!empty($code) && \App\Login\WechatWebLogin::check_state($state)) {
         $url=\App\Login\WechatWebLogin::getAccessTokenUrl($code);
@@ -42,15 +45,16 @@ function vitara_ajax_wechat_web_login(){
                     if (isset($data['openid'])) {
                         $login=new \App\Login\WechatWebLogin($data,$bind);
                         $user=$login->login();
-                        wp_redirect($redirect);
-                        die();
+                        //wp_redirect($redirect);
+                        //die();
                     }
                 }
             }
         }
-    }else {
-        wp_redirect(get_bloginfo('url'));
+    //}else {
+    //    wp_redirect(get_bloginfo('url'));
     }
+    echo '<script>location.href="'.$redirect.'";</script>';
     
     die();
 }
