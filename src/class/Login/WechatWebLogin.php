@@ -120,4 +120,10 @@ class WechatWebLogin extends \LizusVitara\Login\Login
     public static function getUserinfoUrl($token,$openid){
         return 'https://api.weixin.qq.com/sns/userinfo?access_token='.$token.'&openid='.$openid;
     }
+    /**
+     * curl时的设置项
+     */
+    public static function curloptions(){
+        return [];
+    }
 }
