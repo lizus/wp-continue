@@ -32,7 +32,7 @@ function vitara_ajax_wechat_login(){
     
     if (!empty($code) && \App\Login\WechatLogin::check_state($state)) {
         $url=\App\Login\WechatLogin::getAccessTokenUrl($code);
-        $curl=new \Lizus\PHPCurl\PHPCurl(\App\Login\WechatWebLogin::curloptions());
+        $curl=new \Lizus\PHPCurl\PHPCurl(\App\Login\WechatLogin::curloptions());
         $data=$curl->get($url);
         if ($data['err']==0) {
             $data=json_decode($data['data'],true);
