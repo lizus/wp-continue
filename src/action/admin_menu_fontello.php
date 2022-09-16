@@ -7,13 +7,13 @@
  */
 
 add_action('admin_menu',function (){
-    if(!defined('STATIC_DIR')) return;
+    if(!defined('FONTELLO_DIR')) return;
     $title='图标说明';
     $page=add_submenu_page('vitara',$title,$title,'edit_posts','fontello','fontelloAdminPanel');
 },10,999);
 
 function fontelloAdminPanel(){
-    if(!defined('STATIC_DIR')) return;
+    if(!defined('FONTELLO_DIR')) return;
     $fontello=defined('FONTELLO_DIR') ? FONTELLO_DIR :'/css';
     ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri().STATIC_DIR.$fontello.'/fontello.css?v='.\LizusContinue\get_version(); ?>">
