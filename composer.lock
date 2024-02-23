@@ -18,13 +18,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/lizus/php-captcha/zipball/d255e64232bc90e6bcc0d766e8c39015d329d60b",
                 "reference": "d255e64232bc90e6bcc0d766e8c39015d329d60b",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "lizus/php-redis": "dev-master",
@@ -33,12 +27,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "LizusCaptcha\\": "src/class/"
-                },
                 "files": [
                     "src/function.php"
-                ]
+                ],
+                "psr-4": {
+                    "LizusCaptcha\\": "src/class/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -63,19 +57,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/php-curl.git",
-                "reference": "4f7847da1bd185a63a7edd1f69ec52609f066c39"
+                "reference": "d34ea12a133dd3325d5cd8299d84b7d2298d9379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/php-curl/zipball/4f7847da1bd185a63a7edd1f69ec52609f066c39",
-                "reference": "4f7847da1bd185a63a7edd1f69ec52609f066c39",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/php-curl/zipball/d34ea12a133dd3325d5cd8299d84b7d2298d9379",
+                "reference": "d34ea12a133dd3325d5cd8299d84b7d2298d9379",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
@@ -100,9 +88,9 @@
             "description": "php curl class",
             "support": {
                 "issues": "https://github.com/lizus/php-curl/issues",
-                "source": "https://github.com/lizus/php-curl/tree/v0.0.1"
+                "source": "https://github.com/lizus/php-curl/tree/master"
             },
-            "time": "2020-07-23T08:30:11+00:00"
+            "time": "2022-07-30T09:53:25+00:00"
         },
         {
             "name": "lizus/php-loaddir",
@@ -116,13 +104,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/lizus/php-loaddir/zipball/809cf9e7c6dc113c9da2a44c7cf09577e414b298",
                 "reference": "809cf9e7c6dc113c9da2a44c7cf09577e414b298",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": ">7.1"
@@ -157,19 +139,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/php-redis.git",
-                "reference": "100ebfbc20f1732828edf46f9b35933717908035"
+                "reference": "efe4bace6da096eaab63a94515db7476fcb460f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/php-redis/zipball/100ebfbc20f1732828edf46f9b35933717908035",
-                "reference": "100ebfbc20f1732828edf46f9b35933717908035",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/php-redis/zipball/efe4bace6da096eaab63a94515db7476fcb460f4",
+                "reference": "efe4bace6da096eaab63a94515db7476fcb460f4",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
@@ -179,10 +155,7 @@
             "autoload": {
                 "psr-4": {
                     "Lizus\\PHPRedis\\": "src/class/"
-                },
-                "files": [
-                    "src/function/get_redis.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -199,7 +172,7 @@
                 "issues": "https://github.com/lizus/php-redis/issues",
                 "source": "https://github.com/lizus/php-redis/tree/master"
             },
-            "time": "2020-11-25T06:45:58+00:00"
+            "time": "2021-06-28T05:53:25+00:00"
         },
         {
             "name": "lizus/wp-function",
@@ -207,19 +180,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/wp-function.git",
-                "reference": "9645c23b909f397f3adcd20206c5fa2cc9b621a7"
+                "reference": "363b9e34814ddf3fc9e7115ef06f17133cf31837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/wp-function/zipball/9645c23b909f397f3adcd20206c5fa2cc9b621a7",
-                "reference": "9645c23b909f397f3adcd20206c5fa2cc9b621a7",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/wp-function/zipball/363b9e34814ddf3fc9e7115ef06f17133cf31837",
+                "reference": "363b9e34814ddf3fc9e7115ef06f17133cf31837",
+                "shasum": ""
             },
             "require": {
                 "lizus/php-loaddir": "dev-master",
@@ -247,7 +214,7 @@
                 "issues": "https://github.com/lizus/wp-function/issues",
                 "source": "https://github.com/lizus/wp-function/tree/main"
             },
-            "time": "2020-12-24T00:20:27+00:00"
+            "time": "2024-01-31T13:41:44+00:00"
         },
         {
             "name": "lizus/wp-media",
@@ -255,19 +222,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/wp-media.git",
-                "reference": "c703c88150d4863102533a9130f0abf60eff46f5"
+                "reference": "7a2895739193a2ac218995faf29dbee443391919"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/wp-media/zipball/c703c88150d4863102533a9130f0abf60eff46f5",
-                "reference": "c703c88150d4863102533a9130f0abf60eff46f5",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/wp-media/zipball/7a2895739193a2ac218995faf29dbee443391919",
+                "reference": "7a2895739193a2ac218995faf29dbee443391919",
+                "shasum": ""
             },
             "require": {
                 "lizus/php-loaddir": "dev-master",
@@ -295,7 +256,7 @@
                 "issues": "https://github.com/lizus/wp-media/issues",
                 "source": "https://github.com/lizus/wp-media/tree/main"
             },
-            "time": "2020-12-18T02:01:17+00:00"
+            "time": "2021-04-22T08:40:55+00:00"
         },
         {
             "name": "lizus/wp-seo",
@@ -303,19 +264,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/wp-seo.git",
-                "reference": "1c156a1fbf09536c8590b7f2d92b779bd959bea6"
+                "reference": "52a736e8c655326306171dda15b4e643b0700c21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/wp-seo/zipball/1c156a1fbf09536c8590b7f2d92b779bd959bea6",
-                "reference": "1c156a1fbf09536c8590b7f2d92b779bd959bea6",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/wp-seo/zipball/52a736e8c655326306171dda15b4e643b0700c21",
+                "reference": "52a736e8c655326306171dda15b4e643b0700c21",
+                "shasum": ""
             },
             "require": {
                 "lizus/wp-function": "dev-main",
@@ -343,7 +298,7 @@
                 "issues": "https://github.com/lizus/wp-seo/issues",
                 "source": "https://github.com/lizus/wp-seo/tree/main"
             },
-            "time": "2020-12-18T03:45:45+00:00"
+            "time": "2021-09-16T14:50:14+00:00"
         },
         {
             "name": "lizus/wp-vitara",
@@ -351,19 +306,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lizus/wp-vitara.git",
-                "reference": "0a04a4be112c99fc99c855c56840fb0219430e4a"
+                "reference": "0c1384192cefe24fb6324f00fd4bb2b6eec09029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lizus/wp-vitara/zipball/0a04a4be112c99fc99c855c56840fb0219430e4a",
-                "reference": "0a04a4be112c99fc99c855c56840fb0219430e4a",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/lizus/wp-vitara/zipball/0c1384192cefe24fb6324f00fd4bb2b6eec09029",
+                "reference": "0c1384192cefe24fb6324f00fd4bb2b6eec09029",
+                "shasum": ""
             },
             "require": {
                 "lizus/wp-function": "dev-main",
@@ -391,7 +340,7 @@
                 "issues": "https://github.com/lizus/wp-vitara/issues",
                 "source": "https://github.com/lizus/wp-vitara/tree/main"
             },
-            "time": "2021-04-10T06:57:36+00:00"
+            "time": "2024-02-23T01:25:22+00:00"
         }
     ],
     "packages-dev": [],
