@@ -3,7 +3,7 @@
     "description": "wp continue",
     "type": "library",
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.4",
         "lizus/wp-vitara": "dev-main",
         "lizus/php-loaddir": "dev-master",
         "lizus/wp-media": "dev-main",
