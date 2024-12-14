@@ -3,7 +3,7 @@
     "description": "wp continue",
     "type": "library",
     "require": {
-        "php": "^7.1",
+        "php": ">=7.1",
         "lizus/wp-vitara": "dev-main",
         "lizus/php-loaddir": "dev-master",
         "lizus/wp-media": "dev-main",
@@ -13,10 +13,12 @@
         "lizus/php-captcha": "dev-main"
     },
     "license": "GPL-2.0-or-later",
-    "authors": [{
-        "name": "lizus",
-        "email": "lizus.com@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "lizus",
+            "email": "lizus.com@gmail.com"
+        }
+    ],
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {

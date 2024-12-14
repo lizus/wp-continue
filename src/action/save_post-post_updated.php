@@ -1,14 +1,15 @@
 <?php
+
 /**
- * 文章发布的时候，在作者的usermeta中记录该作者最近的更新时间
- * 该功能应该布署在主题的action中，根据需要重新设定
+ * 文章有更新或发布的时候，更新对应文章类型的缓存的最后更新时间
  */
-/*
-add_action( "save_post", function ($pid,$post,$update){
-  if($post->post_type == 'nav_menu_item') return;
-  if ($post->post_status=='publish') {
-    $user=new \LizusContinue\User\User($post->post_author);
-    $user->set('post_updated',current_time('timestamp'));
+add_action("save_post", function ($pid, $post, $update) {
+
+  if ($post->post_status == 'publish' || $update === true) {
+    /**
+     * 文章发布的时候更新缓存的最后更新时间
+     */
+    wp_cache_set_last_changed('posts');
+    wp_cache_set_last_changed($post->post_type . '_posts');
   }
-},10,3);
-*/
+}, 10, 3);
